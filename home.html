@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Weaves Heritage</title>
+    <link rel="stylesheet" href="/static/css/style.css?v=2">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="star">✦</span> Indian Weaves
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/weaves">Weaves</a>
+            <a href="/festivals">Festivals</a>
+            <a href="/regions">Explore by Region</a>
+            <a href="/about">About</a>
+        </div>
+        <div class="search-bar">
+    <form action="/search" method="GET" style="display:flex; align-items:center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16" style="margin-right:6px; flex-shrink:0;">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.868-3.833zm-5.242 1.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+        </svg>
+        <input type="text" name="q" placeholder="Search weaves...">
+        <button type="submit" class="search-submit">Go</button>
+    </form>
+</div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="tagline">✦ CELEBRATING INDIA'S TEXTILE LEGACY ✦</p>
+            <h1>Discover the Threads of <br>
+                <span class="gold-text">India's Heritage</span>
+            </h1>
+            <p class="hero-desc">
+                A living encyclopedia of India's handwoven textiles — from the
+                royal Banarasi silks to the vibrant Patola ikats. Explore centuries
+                of craftsmanship.
+            </p>
+            <div class="hero-buttons">
+                <a href="/weaves" class="btn-yellow">Explore Weaves</a>
+                <a href="/about" class="btn-white">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="section-header">
+            <span class="star gold">✦</span>
+            <h2>Weaving Stories, Preserving Traditions</h2>
+            <div class="divider"></div>
+        </div>
+        <p class="about-text">
+            <strong>Indian Weaves</strong> is a platform dedicated to documenting and celebrating India's rich textile
+            heritage. Whether you're a <em>student</em> researching traditional crafts, a <em>tourist</em> seeking authentic
+            experiences, a <em>researcher</em> studying cultural art forms, or an <em>artisan</em> preserving age-old
+            techniques — this is your gateway to the vibrant world of Indian handlooms and weaves.
+        </p>
+    </section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="features-grid">
+
+        <a href="/weaves" class="feature-card-link">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c8961e" stroke-width="1.5">
+                        <path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z"/>
+                    </svg>
+                </div>
+                <h3>Explore Weaves</h3>
+                <p>Browse India's diverse textile traditions from silk to cotton</p>
+            </div>
+        </a>
+
+        <a href="/festivals" class="feature-card-link">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c8961e" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                        <line x1="16" y1="2" x2="16" y2="6"/>
+                        <line x1="8" y1="2" x2="8" y2="6"/>
+                        <line x1="3" y1="10" x2="21" y2="10"/>
+                        <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/>
+                    </svg>
+                </div>
+                <h3>Textile Festivals</h3>
+                <p>Discover vibrant festivals celebrating India's weaving traditions</p>
+            </div>
+        </a>
+
+        <a href="/regions" class="feature-card-link">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c8961e" stroke-width="1.5">
+                        <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/>
+                        <line x1="9" y1="3" x2="9" y2="18"/>
+                        <line x1="15" y1="6" x2="15" y2="21"/>
+                    </svg>
+                </div>
+                <h3>Explore by Region</h3>
+                <p>Journey through India's textile map, state by state</p>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+    <!-- Featured Weaves Section -->
+<section class="featured-section">
+    <div class="section-header">
+        <h2 class="section-title">Featured Weaves</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="weaves-grid">
+
+        <a href="/weave/1" style="text-decoration:none; color:inherit;">
+            <div class="weave-card">
+                <img src="/static/images/weaves/banarasi.jpg" alt="Banarasi Silk">
+                <div class="weave-info">
+                    <h3>Banarasi Silk</h3>
+                    <p>Uttar Pradesh</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/weave/4" style="text-decoration:none; color:inherit;">
+            <div class="weave-card">
+                <img src="/static/images/weaves/kanjeevaram.jpg" alt="Kanjeevaram">
+                <div class="weave-info">
+                    <h3>Kanjeevaram</h3>
+                    <p>Tamil Nadu</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/weave/9" style="text-decoration:none; color:inherit;">
+            <div class="weave-card">
+                <img src="/static/images/weaves/patola.jpg" alt="Patola">
+                <div class="weave-info">
+                    <h3>Patola</h3>
+                    <p>Gujarat</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/weave/11" style="text-decoration:none; color:inherit;">
+            <div class="weave-card">
+                <img src="/static/images/weaves/chanderi.jpg" alt="Chanderi">
+                <div class="weave-info">
+                    <h3>Chanderi</h3>
+                    <p>Madhya Pradesh</p>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-col">
+            <h3><span class="star">✦</span> Indian Weaves</h3>
+            <p>Preserving the timeless art of Indian textiles. Every thread tells a story, every weave carries a legacy.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="/">Home</a>
+            <a href="/weaves">Weaves</a>
+            <a href="/festivals">Festivals</a>
+            <a href="/regions">Explore by Region</a>
+        </div>
+        <div class="footer-col">
+            <h4>About</h4>
+            <p>Built with love for India's artisans and their craft. A resource for students, researchers, tourists, and textile enthusiasts.</p>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>© 2026 Indian Weaves. Celebrating India's Textile Heritage.</p>
+    </div>
+
+</body>
+</html>
