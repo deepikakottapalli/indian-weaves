@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Weaves - Explore by Region</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="star">✦</span> Indian Weaves
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/weaves">Weaves</a>
+            <a href="/festivals">Festivals</a>
+            <a href="/regions">Explore by Region</a>
+            <a href="/about">About</a>
+        </div>
+        <div class="search-bar">
+    <form action="/search" method="GET" style="display:flex; align-items:center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16" style="margin-right:6px; flex-shrink:0;">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.868-3.833zm-5.242 1.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+        </svg>
+        <input type="text" name="q" placeholder="Search weaves...">
+        <button type="submit" class="search-submit">Go</button>
+    </form>
+</div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Explore by Region</h1>
+        <p>Discover the rich tapestry of India’s weaving traditions across every region</p>
+    </section>
+
+    <!-- Region Cards -->
+    <section class="regions-section">
+
+        <!-- North India -->
+<div class="region-card" onclick="toggleRegion('north')">
+    <div class="region-header north-bg">
+        <div class="region-icon">🧵</div>
+        <h2>North India</h2>
+        <p class="region-states">Kashmir • Punjab • Uttar Pradesh</p>
+    </div>
+    <div class="region-weaves" id="north">
+        <div class="region-weave-item">
+            <img src="/static/images/weaves/pashmina.jpg" 
+                 alt="Pashmina">
+            <div class="region-weave-info">
+                <h4>Pashmina</h4>
+                <p>Kashmir</p>
+                <a href="/weave/3">View Details →</a>
+            </div>
+        </div>
+        <div class="region-weave-item">
+            <img src="/static/images/weaves/phulkari.jpg" 
+                 alt="Phulkari">
+            <div class="region-weave-info">
+                <h4>Phulkari</h4>
+                <p>Punjab</p>
+                <a href="/weave/2">View Details →</a>
+            </div>
+        </div>
+        <div class="region-weave-item">
+            <img src="/static/images/weaves/banarasi.jpg" 
+                 alt="Banarasi Silk">
+            <div class="region-weave-info">
+                <h4>Banarasi Silk</h4>
+                <p>Uttar Pradesh</p>
+                <a href="/weave/1">View Details →</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- South India -->
+        <div class="region-card" onclick="toggleRegion('south')">
+            <div class="region-header south-bg">
+                <div class="region-icon">🧵</div>
+                <h2>South India</h2>
+                <p class="region-states">Tamil Nadu • Telangana • Kerala</p>
+            </div>
+            <div class="region-weaves" id="south">
+                <div class="region-weave-item">
+                    <img src="/static/images/weaves/kanjeevaram.jpg" 
+                         alt="Kanjeevaram">
+                    <div class="region-weave-info">
+                        <h4>Kanjeevaram</h4>
+                        <p>Tamil Nadu</p>
+                        <a href="/weave/4">View Details →</a>
+                    </div>
+                </div>
+                <div class="region-weave-item">
+                    <img src="/static/images/weaves/pochampally.jpg" 
+                         alt="Pochampally Ikat">
+                    <div class="region-weave-info">
+                        <h4>Pochampally Ikat</h4>
+                        <p>Telangana</p>
+                        <a href="/weave/5">View Details →</a>
+                    </div>
+                </div>
+                <div class="region-weave-item">
+                    <img src="/static/images/weaves/kasavu.jpg" 
+                         alt="Kasavu">
+                    <div class="region-weave-info">
+                        <h4>Kasavu</h4>
+                        <p>Kerala</p>
+                        <a href="/weave/6">View Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- East India -->
+        <div class="region-card" onclick="toggleRegion('east')">
+            <div class="region-header east-bg">
+                <div class="region-icon">🧵</div>
+                <h2>East India</h2>
+                <p class="region-states">West Bengal • Odisha</p>
+            </div>
+            <div class="region-weaves" id="east">
+                <div class="region-weave-item">
+                    <img src="/static/images/weaves/kantha.jpg" 
+                         alt="Kantha">
+                    <div class="region-weave-info">
+                        <h4>Kantha</h4>
+                        <p>West Bengal</p>
+                        <a href="/weave/7">View Details →</a>
+                    </div>
+                </div>
+                <div class="region-weave-item">
+                    <img src="/static/images/weaves/sambalpuri.jpg" 
+                         alt="Sambalpuri">
+                    <div class="region-weave-info">
+                        <h4>Sambalpuri</h4>
+                        <p>Odisha</p>
+                        <a href="/weave/8">View Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- West India -->
+        <div class="region-card" onclick="toggleRegion('west')">
+            <div class="region-header west-bg">
+                <div class="region-icon">🧵</div>
+                <h2>West India</h2>
+                <p class="region-states">Gujarat • Rajasthan</p>
+            </div>
+            <div class="region-weaves" id="west">
+                <div class="region-weave-item">
+                    <img src="/static/images/weaves/patola.jpg" 
+                         alt="Patola">
+                    <div class="region-weave-info">
+                        <h4>Patola</h4>
+                        <p>Gujarat</p>
+                        <a href="/weave/9">View Details →</a>
+                    </div>
+                </div>
+                <div class="region-weave-item">
+                    <img src="/static/images/weaves/bandhani.jpg" 
+                         alt="Bandhani">
+                    <div class="region-weave-info">
+                        <h4>Bandhani</h4>
+                        <p>Rajasthan</p>
+                        <a href="/weave/10">View Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Central India -->
+        <div class="region-card" onclick="toggleRegion('central')">
+            <div class="region-header central-bg">
+                <div class="region-icon">🧵</div>
+                <h2>Central India</h2>
+                <p class="region-states">Madhya Pradesh</p>
+            </div>
+            <div class="region-weaves" id="central">
+                <div class="region-weave-item">
+                    <img src="/static/images/weaves/chanderi.jpg" 
+                         alt="Chanderi">
+                    <div class="region-weave-info">
+                        <h4>Chanderi</h4>
+                        <p>Madhya Pradesh</p>
+                        <a href="/weave/11">View Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-col">
+            <h3><span class="star">✦</span> Indian Weaves</h3>
+            <p>Preserving the timeless art of Indian textiles. Every thread tells a story, every weave carries a legacy.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="/">Home</a>
+            <a href="/weaves">Weaves</a>
+            <a href="/festivals">Festivals</a>
+            <a href="/regions">Explore by Region</a>
+        </div>
+        <div class="footer-col">
+            <h4>About</h4>
+            <p>Built with love for India's artisans and their craft. A resource for students, researchers, tourists, and textile enthusiasts.</p>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>© 2026 Indian Weaves. Celebrating India's Textile Heritage.</p>
+    </div>
+
+    <!-- Toggle Script -->
+    <script>
+        function toggleRegion(regionId) {
+            const weaves = document.getElementById(regionId);
+            if (weaves.style.display === 'block') {
+                weaves.style.display = 'none';
+            } else {
+                weaves.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>
