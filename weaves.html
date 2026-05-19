@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Weaves - Explore Weaves</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="star">✦</span> Indian Weaves
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/weaves">Weaves</a>
+            <a href="/festivals">Festivals</a>
+            <a href="/regions">Explore by Region</a>
+            <a href="/about">About</a>
+        </div>
+        <div class="search-bar">
+    <form action="/search" method="GET" style="display:flex; align-items:center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 16 16" style="margin-right:6px; flex-shrink:0;">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.415l-3.868-3.833zm-5.242 1.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/>
+        </svg>
+        <input type="text" name="q" placeholder="Search weaves...">
+        <button type="submit" class="search-submit">Go</button>
+    </form>
+</div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Explore Indian Weaves</h1>
+        <p>Discover the rich diversity of India's handloom traditions</p>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <button class="filter-btn active" onclick="filterWeaves('all')">All</button>
+        <button class="filter-btn" onclick="filterWeaves('North')">North</button>
+        <button class="filter-btn" onclick="filterWeaves('South')">South</button>
+        <button class="filter-btn" onclick="filterWeaves('East')">East</button>
+        <button class="filter-btn" onclick="filterWeaves('West')">West</button>
+        <button class="filter-btn" onclick="filterWeaves('Central')">Central</button>
+    </section>
+
+    <!-- Weaves Gallery -->
+    <section class="gallery-section">
+        <div class="gallery-grid">
+
+            <div class="gallery-card" data-region="North">
+                <img src="/static/images/weaves/banarasi.jpg" alt="Banarasi Silk">
+                <div class="gallery-info">
+                    <span class="region-tag">North</span>
+                    <h3>Banarasi Silk</h3>
+                    <p class="state-name">Uttar Pradesh</p>
+                    <p class="short-desc">Famous silk sarees with gold and silver brocade work, worn during weddings and festivals.</p>
+                    <a href="/weave/1" class="view-btn">View Details →</a>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-region="North">
+                <img src="/static/images/weaves/phulkari.jpg" alt="Phulkari">
+                <div class="gallery-info">
+                    <span class="region-tag">North</span>
+                    <h3>Phulkari</h3>
+                    <p class="state-name">Punjab</p>
+                    <p class="short-desc">Colorful embroidery meaning flower craft, traditionally made for weddings and celebrations.</p>
+                    <a href="/weave/2" class="view-btn">View Details →</a>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-region="North">
+                <img src="/static/images/weaves/pashmina.jpg" alt="Pashmina">
+                <div class="gallery-info">
+                    <span class="region-tag">North</span>
+                    <h3>Pashmina</h3>
+                    <p class="state-name">Kashmir</p>
+                    <p class="short-desc">Finest cashmere wool shawls known for their warmth, softness and intricate embroidery.</p>
+                    <a href="/weave/3" class="view-btn">View Details →</a>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-region="South">
+                <img src="/static/images/weaves/kanjeevaram.jpg" alt="Kanjeevaram">
+                <div class="gallery-info">
+                    <span class="region-tag">South</span>
+                    <h3>Kanjeevaram</h3>
+                    <p class="state-name">Tamil Nadu</p>
+                    <p class="short-desc">Heavy silk sarees known for rich colors, durability and temple inspired designs.</p>
+                    <a href="/weave/4" class="view-btn">View Details →</a>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-region="South">
+                <img src="/static/images/weaves/pochampally.jpg" alt="Pochampally Ikat">
+                <div class="gallery-info">
+                    <span class="region-tag">South</span>
+                    <h3>Pochampally Ikat</h3>
+                    <p class="state-name">Telangana</p>
+                    <p class="short-desc">Famous geometric patterns created using tie and dye technique before weaving.</p>
+                    <a href="/weave/5" class="view-btn">View Details →</a>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-region="South">
+                <img src="/static/images/weaves/kasavu.jpg" alt="Kasavu">
+                <div class="gallery-info">
+                    <span class="region-tag">South</span>
+                    <h3>Kasavu</h3>
+                    <p class="state-name">Kerala</p>
+                    <p class="short-desc">Traditional Kerala saree with golden border, worn during Onam and other celebrations.</p>
+                    <a href="/weave/6" class="view-btn">View Details →</a>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-region="East">
+                <img src="/static/images/weaves/kantha.jpg" alt="Kantha">
+                <div class="gallery-info">
+                    <span class="region-tag">East</span>
+                    <h3>Kantha</h3>
+                    <p class="state-name">West Bengal</p>
+                    <p class="short-desc">Beautiful embroidery tradition using running stitch to create intricate patterns.</p>
+                    <a href="/weave/7" class="view-btn">View Details →</a>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-region="East">
+                <img src="/static/images/weaves/sambalpuri.jpg" alt="Sambalpuri">
+                <div class="gallery-info">
+                    <span class="region-tag">East</span>
+                    <h3>Sambalpuri</h3>
+                    <p class="state-name">Odisha</p>
+                    <p class="short-desc">Traditional ikat weave known for shankha, chakra and phula motifs.</p>
+                    <a href="/weave/8" class="view-btn">View Details →</a>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-region="West">
+                <img src="/static/images/weaves/patola.jpg" alt="Patola">
+                <div class="gallery-info">
+                    <span class="region-tag">West</span>
+                    <h3>Patola</h3>
+                    <p class="state-name">Gujarat</p>
+                    <p class="short-desc">Double ikat woven silk sarees, extremely rare and take months to weave.</p>
+                    <a href="/weave/9" class="view-btn">View Details →</a>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-region="West">
+                <img src="/static/images/weaves/bandhani.jpg" alt="Bandhani">
+                <div class="gallery-info">
+                    <span class="region-tag">West</span>
+                    <h3>Bandhani</h3>
+                    <p class="state-name">Rajasthan</p>
+                    <p class="short-desc">Vibrant tie and dye textile tradition creating beautiful dot patterns.</p>
+                    <a href="/weave/10" class="view-btn">View Details →</a>
+                </div>
+            </div>
+
+            <div class="gallery-card" data-region="Central">
+                <img src="/static/images/weaves/chanderi.jpg" alt="Chanderi">
+                <div class="gallery-info">
+                    <span class="region-tag">Central</span>
+                    <h3>Chanderi</h3>
+                    <p class="state-name">Madhya Pradesh</p>
+                    <p class="short-desc">Lightweight fabric with sheer texture, known for its golden or silver borders.</p>
+                    <a href="/weave/11" class="view-btn">View Details →</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-col">
+            <h3><span class="star">✦</span> Indian Weaves</h3>
+            <p>Preserving the timeless art of Indian textiles. Every thread tells a story, every weave carries a legacy.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="/">Home</a>
+            <a href="/weaves">Weaves</a>
+            <a href="/festivals">Festivals</a>
+            <a href="/regions">Explore by Region</a>
+        </div>
+        <div class="footer-col">
+            <h4>About</h4>
+            <p>Built with love for India's artisans and their craft. A resource for students, researchers, tourists, and textile enthusiasts.</p>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <p>© 2026 Indian Weaves. Celebrating India's Textile Heritage.</p>
+    </div>
+
+    <!-- Filter Script -->
+    <script>
+        function filterWeaves(region) {
+            const cards = document.querySelectorAll('.gallery-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                if (region === 'all' || card.dataset.region === region) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
